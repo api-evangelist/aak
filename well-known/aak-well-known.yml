@@ -1,0 +1,121 @@
+generated: '2026-09-05'
+method: probed
+source: live GET probes of the named /.well-known/ path list on every host this record knows
+note: >-
+  AAK AB publishes no discovery surface. Every named path on both hosts returned HTTP 404 with the
+  corporate site's Episerver 404 page as the body (327,061 bytes of HTML) — an honest 404 status, not
+  a catch-all 200. No API, developer, docs or portal hostname resolves under aak.com, so the host set
+  is the registrable domain and www only. hit_count is 0 and NO WellKnown/SecurityTxt/AgentCard
+  pointer is emitted; this file records an absence.
+hit_count: 0
+path_echo_control: passed
+hosts:
+- host: https://www.aak.com
+  documents:
+  - path: /.well-known/security.txt
+    status: 404
+    file: null
+  - path: /.well-known/openid-configuration
+    status: 404
+    file: null
+  - path: /.well-known/oauth-authorization-server
+    status: 404
+    file: null
+  - path: /.well-known/oauth-protected-resource
+    status: 404
+    file: null
+  - path: /.well-known/api-catalog
+    status: 404
+    file: null
+  - path: /.well-known/ai-plugin.json
+    status: 404
+    file: null
+  - path: /.well-known/apis.json
+    status: 404
+    file: null
+  - path: /apis.json
+    status: 404
+    file: null
+  - path: /apis.yml
+    status: 404
+    file: null
+  - path: /.well-known/aauth-resource.json
+    status: 404
+    file: null
+  - path: /.well-known/ucp.json
+    status: 404
+    file: null
+  - path: /.well-known/acp.json
+    status: 404
+    file: null
+  - path: /.well-known/agent-card.json
+    status: 404
+    file: null
+  - path: /.well-known/agent.json
+    status: 404
+    file: null
+  - path: /.well-known/aak-negative-control-7f3ab91c.json
+    status: 404
+    file: null
+- host: https://aak.com
+  documents:
+  - path: /.well-known/security.txt
+    status: 404
+    file: null
+  - path: /.well-known/openid-configuration
+    status: 404
+    file: null
+  - path: /.well-known/oauth-authorization-server
+    status: 404
+    file: null
+  - path: /.well-known/oauth-protected-resource
+    status: 404
+    file: null
+  - path: /.well-known/api-catalog
+    status: 404
+    file: null
+  - path: /.well-known/ai-plugin.json
+    status: 404
+    file: null
+  - path: /.well-known/apis.json
+    status: 404
+    file: null
+  - path: /apis.json
+    status: 404
+    file: null
+  - path: /apis.yml
+    status: 404
+    file: null
+  - path: /.well-known/aauth-resource.json
+    status: 404
+    file: null
+  - path: /.well-known/ucp.json
+    status: 404
+    file: null
+  - path: /.well-known/acp.json
+    status: 404
+    file: null
+  - path: /.well-known/agent-card.json
+    status: 404
+    file: null
+  - path: /.well-known/agent.json
+    status: 404
+    file: null
+  - path: /.well-known/aak-negative-control-7f3ab91c.json
+    status: 404
+    file: null
+contract_discovery:
+  note: >-
+    STEP 0b probes run alongside the well-known sweep and all missed. /openapi.json, /swagger.json and
+    /api-docs returned 404 on both hosts; no GraphQL, MCP or OGC surface is named anywhere in AAK's
+    prose, and no api/developer/developers/docs/portal/my hostname resolves (NXDOMAIN), so there was
+    no API host root to probe. No GitHub organization for AAK AB exists (the GitHub org "AAK-MBU"
+    belongs to Aarhus Kommune, a Danish municipality, not AAK AB).
+  probes:
+  - {url: 'https://www.aak.com/openapi.json', status: 404}
+  - {url: 'https://www.aak.com/swagger.json', status: 404}
+  - {url: 'https://www.aak.com/api-docs', status: 404}
+  - {url: 'https://www.aak.com/llms.txt', status: 404}
+  - {url: 'https://api.aak.com/', status: 0, note: NXDOMAIN}
+  - {url: 'https://developer.aak.com/', status: 0, note: NXDOMAIN}
+  - {url: 'https://docs.aak.com/', status: 0, note: NXDOMAIN}

@@ -64,5 +64,15 @@
 > Full detail: **[Where this data comes from](https://apievangelist.com/about/where-our-data-comes-from)**
 <!-- API-EVANGELIST-PROVENANCE:END -->
 
-AAK is a company surfaced via the API Evangelist harvest backlog (source: secondary-market) and added to the network as a stub for full-pipeline profiling.
-- https://www.nasdaqprivatemarket.com/
+AAK AB is a Swedish producer of value-adding plant-based oils and fats, headquartered in Malmo and listed
+on Nasdaq Stockholm (ticker AAK). Formed in 2005 by the merger of Aarhus United (Denmark) and Karlshamns AB
+(Sweden), it employs roughly 4,000 people across 19 production facilities, 25 regional sales offices and
+16 Customer Innovation Centers, serving chocolate and confectionery, bakery, dairy and ice cream,
+plant-based foods, special nutrition, foodservice and retail, personal care, animal nutrition, candles and
+technical products.
+
+AAK publishes no developer program, API, SDK or machine-readable contract. Every named /.well-known/ and
+contract-discovery path returns 404 on aak.com and www.aak.com, and no api/developer/docs/portal hostname
+resolves under the domain. This profile records that absence.
+
+- https://www.aak.com/

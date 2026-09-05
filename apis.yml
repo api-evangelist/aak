@@ -1,10 +1,22 @@
 aid: aak
 name: AAK
-description: 'AAK is a company surfaced via the API Evangelist harvest backlog (source: secondary-market)
-  and added to the network as a stub for full-pipeline profiling.'
+description: >-
+  AAK AB is a Swedish producer of value-adding plant-based oils and fats, headquartered in Malmö and
+  listed on Nasdaq Stockholm (ticker AAK) in the Food & Beverage large-cap segment. It was formed in
+  2005 through the merger of Denmark's Aarhus United and Sweden's Karlshamns AB, and describes more
+  than 150 years of combined experience in specialty vegetable oils. The company employs roughly
+  4,000 people across 19 production facilities, 25 regional sales offices and 16 Customer Innovation
+  Centers, and works through a co-development model with customers in chocolate and confectionery,
+  bakery, dairy and ice cream, plant-based foods, special nutrition, foodservice and retail, personal
+  care, animal nutrition, candles and technical products such as fatty acids and glycerine. Its
+  product is a physical industrial ingredient, not software: no developer program, public API, SDK,
+  developer portal, machine-readable contract or GitHub organization could be found, and no
+  api/developer/docs/portal hostname resolves under aak.com.
 url: https://raw.githubusercontent.com/api-evangelist/aak/refs/heads/main/apis.yml
+image: https://www.aak.com/globalassets/adobestock_463258443_web.jpg
 x-type: company
 x-source: harvest:secondary-market
+x-harvest-source-url: https://www.nasdaqprivatemarket.com/
 x-tier: stub
 x-tier-reason: harvest
 specificationVersion: '0.20'
@@ -12,6 +24,15 @@ created: '2026-09-05'
 modified: '2026-09-05'
 tags:
 - Company
+- Food and Beverage
+- Ingredients
+- Vegetable Oils
+- Fats
+- Manufacturing
+- Chemicals
+- Consumer Goods
+- Agriculture
+- Sweden
 apis: []
 maintainers:
 - FN: Kin Lane
@@ -19,5 +40,38 @@ maintainers:
 - FN: APIs.json
   email: info@apis.io
 common:
+- type: DomainSecurity
+  url: security/aak-domain-security.yml
 - type: Website
-  url: https://www.nasdaqprivatemarket.com/
+  url: https://www.aak.com/
+- type: PrivacyPolicy
+  url: https://www.aak.com/about-AAK/data-privacy-information/
+- type: Blog
+  url: https://www.aak.com/news-and-media/news/
+x-enrichment:
+  date: '2026-09-05'
+  status: minimal
+  artifacts_added: 2
+  pass: local-v3
+x-coverage:
+  state: none
+  reason: not-a-software-company
+  detail: >-
+    AAK AB manufactures plant-based oils and fats for food and industrial customers and sells a
+    physical ingredient through a co-development sales model, so there is nothing to expose
+    programmatically — aak.com carries no developer, API or integration section anywhere in its
+    navigation, every named /.well-known/ and contract path returns 404 on both aak.com and
+    www.aak.com, api/developer/developers/docs/portal/my hostnames are all NXDOMAIN, and no GitHub
+    organization for the company exists.
+  evidence:
+  - url: https://www.aak.com/
+    status: 200
+  - url: https://www.aak.com/.well-known/security.txt
+    status: 404
+  - url: https://www.aak.com/openapi.json
+    status: 404
+  - url: https://www.aak.com/.well-known/agent-card.json
+    status: 404
+  - url: https://www.aak.com/llms.txt
+    status: 404
+  checked: '2026-09-05'
